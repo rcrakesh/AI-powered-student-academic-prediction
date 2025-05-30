@@ -7,32 +7,33 @@ import plotly.graph_objects as go
 import pandas as pd
 import streamlit.components.v1 as components
 
-# # --- Login Credentials ---
-# USERNAME = "admin"
-# PASSWORD = "1234"
+# --- Login Credentials ---
+USERNAME = "admin"
+PASSWORD = "1234"
 
-# # --- Session State Initialization ---
-# if 'logged_in' not in st.session_state:
-#     st.session_state.logged_in = False
+# --- Session State Initialization ---
+if 'logged_in' not in st.session_state:
+    st.session_state.logged_in = False
 
-# # --- Login Page ---
-# def login():
-#     st.markdown("<h2 style='color:white;'>🔐 Login</h2>", unsafe_allow_html=True)
-#     with st.form("login_form"):
-#         username = st.text_input("Username")
-#         password = st.text_input("Password", type="password")
-#         submit = st.form_submit_button("Login")
+# --- Login Page ---
+def login():
+    st.markdown("<h2 style='color:white;'>🔐 Login</h2>", unsafe_allow_html=True)
+    with st.form("login_form"):
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
+        submit = st.form_submit_button("Login")
+        st.write("username:admin pass:1234")
 
-#         if submit:
-#             if username == USERNAME and password == PASSWORD:
-#                 st.session_state.logged_in = True
-#             else:
-#                 st.error("Invalid username or password")
+        if submit:
+            if username == USERNAME and password == PASSWORD:
+                st.session_state.logged_in = True
+            else:
+                st.error("Invalid username or password")
 
-# # --- Check Login ---
-# if not st.session_state.logged_in:
-#     login()
-#     st.stop()
+# --- Check Login ---
+if not st.session_state.logged_in:
+    login()
+    st.stop()
 
 # --- Custom CSS Injection ---
 st.markdown("""

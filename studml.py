@@ -22,6 +22,7 @@ def login():
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
         submit = st.form_submit_button("Login")
+        st.write("username = admin || password = 1234 ")
 
         if submit:
             if username == USERNAME and password == PASSWORD:
